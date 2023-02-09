@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--核心配置文件-->
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--引入properties文件-->
+    <properties resource="jdbc.properties" />
+
+    <!--(properties?,settings?,typeAliases?,typeHandlers?,objectFactory?,objectWrapperFactory?,reflectorFactory?,plugins?,environments?,databaseIdProvider?,mappers?)-->
+    <typeAliases>
+        <!--<typeAlias type="lrc.pojo.User" alias="user"></typeAlias>-->
+        <package name="lrc.pojo"/>
+    </typeAliases>
+    
+    <!--配置连接数据库的环境-->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--引入mybatis映射文件-->
+    <mappers>
+        <!--引入单个映射文件-->
+        <!--<mapper resource="mappers/UserMapper.xml"/>-->
+        <!--引入映射文件所在的包-->
+        <package name="lrc.mapper"/>
+    </mappers>
+
+</configuration>
