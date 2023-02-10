@@ -2,26 +2,26 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>css选择器1</title>
-		<style>
-			//全局选择器
-			* {
-				color: aqua;
-			}
-			//元素选择器
-			h4 {
-				color: yellowgreen;
-			}
-			b {
-				color: lightcoral;
-			}
-		</style>
+		<title>js 数据类型</title>
+		
 	</head>
 	<body>
-		<p>123</p>
-		<p>456</p>
-		<p>789</p>
-		<h4>999152</h4>
-		<p>学完java学<b>前端</b></p>
+		<!-- 
+		 值类型(基本类型)：字符串（String）、数字(Number)、布尔(Boolean)、空（Null）、未定义（Undefined）、Symbol。
+		 
+		 引用数据类型（对象类型）：对象(Object)、数组(Array)、函数(Function)，还有两个特殊的对象：正则（RegExp）和日期（Date）。
+		 -->
+		 
+		 <script>
+			 //弱类型
+			 var x = 123;
+			 document.write(x + "\n" + typeof(x) + "\n");
+			 
+			 x = "lrc";
+			 document.write(x + "\n" + typeof(x) + "\n");
+			 
+			 x = false;
+			 document.write(x + "\n" + typeof(x) + "\n");
+		 </script>
 	</body>
 </html>

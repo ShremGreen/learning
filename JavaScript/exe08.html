@@ -2,31 +2,34 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>背景属性</title>
-		<style>
-			.a {
-				width: 300px;
-				height: 200px;
-				background-color: #249999;
-			}
-			.b {
-				width: 300px;
-				height: 200px;
-				background-color: #622222;
-			}
-			.c {
-				width: 500px;
-				height: 500px;
-				background-image: url("img/1000.webp");
-				background-repeat: no-repeat;
-				/* background-size: cover; */
-				background-position: right bottom;
-			}
-		</style>
+		<title>String 常用方法</title>
 	</head>
 	<body>
-		<div class="a"></div>
-		<div class="b"></div>
-		<div class="c"></div>
+		<script>
+			//字符串通过''或""修饰
+			//单引号内部可以嵌套双引号，双引号内部可以嵌套单引号
+			var str = 'Did she say \'Hello\'?'
+			console.log(str);//Did she say 'Hello'?
+			console.log("\n" + str.length);
+			console.log(str.charAt(4));
+			
+			var str1 = "abc";
+			var str2 = "cba";
+			console.log(str1.concat(str2));
+			
+			var str3 = "abcdefghijklmn";
+			console.log(str3.substring(0,2));//ab
+			console.log(str3.substring(2));//cdefghijklmn
+			console.log(str3.substring(9,2));//cdefghi
+			console.log(str3.substring(2,9));//cdefghi
+			console.log(str3.substring(-3));//abcdefghijklmn
+			console.log(str3.substring(2,-3));//ab
+			
+			console.log(str3.indexOf('bc'));
+			
+			console.log('  hello world  '.trim());
+			
+			console.log('it|sxt|lrc'.split('|'));
+		</script>
 	</body>
 </html>

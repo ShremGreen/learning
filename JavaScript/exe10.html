@@ -2,40 +2,52 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>表格边框</title>
-		<style>
-			table, td {
-				border: 5px solid red;
-			}
-			table {
-				border-collapse: collapse;
-				/* width: 300px;
-				height: 500px; */
-			}
-			td {
-				text-align: center;
-				vertical-align: center;
-				padding: 20px;
-				background-color: #845612;
-				color: #ffffff;
-			}
-		</style>
+		<title>js 数据类型 对象</title>
 	</head>
-	
 	<body>
-		<table>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>4</td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td>6</td>
-			</tr>
-		</table>
+		<script>
+			//数组
+			var arr1 = new Array();
+			var arr2 = new Array('a','b','c');
+			var arr3 = new Array('d','e');
+			var people = {name:'Tom', age: 22, sex: 'male', play: function() {}};
+			//遍历数组
+			for(var i = 0; i < arr2.length; i ++) {
+				console.log(arr2[i]);
+			}
+			
+			//Array.isArray()
+			console.log(typeof(arr1));//object
+			console.log(Array.isArray(arr1));//true
+			
+			//pop() push()
+			arr2.pop();
+			console.log(arr2);//['a', 'b']
+			arr2.push('d');
+			console.log(arr2);//['a', 'b', 'd']
+			
+			//shift() unshift()
+			arr2.shift();
+			console.log(arr2);//['b', 'd']
+			arr2.unshift('e');
+			console.log(arr2);//['e', 'b', 'd']
+			
+			//join() split()
+			var res1 = arr2.join(" ");//e b d
+			console.log(res1);
+			var res2 = res1.split(" ");//['e', 'b', 'd']
+			console.log(res2);
+			
+			//concat()
+			console.log(arr2.concat(arr3));//['e', 'b', 'd', 'd', 'e']
+			
+			//reverse()
+			arr2.reverse();
+			console.log(arr2);//['d', 'b', 'e']
+			
+			//indexOf()
+			console.log(arr2.indexOf('b'));//1
+		
+		</script>
 	</body>
 </html>

@@ -2,133 +2,13 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>html表</title>
+		<title>JavaScript：直接写入 HTML 输出流</title>
 	</head>
 	<body>
-		<!-- 有序列表 -->
-		<ol>
-			<li>苹果</li>
-			<li>香蕉</li>
-			<li>菠萝</li>
-			<li>橘子</li>
-		</ol>
-		
-		<ol type="i">
-			<li>苹果</li>
-			<li>香蕉</li>
-			<li>菠萝</li>
-			<li>橘子</li>
-		</ol>
-		
-		
-		<!-- 无序列表 -->
-		<ul type="disc">
-			<b>蔬菜：</b>
-			<li>波菜</li>
-			<li>包菜</li>
-			<li>
-				白菜
-				<ul type="circle">
-					<li>大白菜</li>
-					<li>小白菜</li>
-				</ul>
-			</li>
-			<li>油菜</li>
-		</ul>
-		<!-- 快速生成无序列表：ul>li*3 -->
-		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-		
-		
-		<!-- 表格 -->
-		<table>
-			<tr>
-				<td>水果</td>
-				<td>蔬菜</td>
-			</tr>
-			<tr>
-				<td>苹果</td>
-				<td>包菜</td>
-			</tr>
-			<tr>
-				<td>香蕉</td>
-				<td>萝卜</td>
-			</tr>
-		</table>
-		<!-- 快速生成表格:table>tr*3>td*4 -->
-		<table border="1px" width="200px" height="100px">
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td>6</td>
-				<td>7</td>
-				<td>8</td>
-			</tr>
-			<tr>
-				<td>9</td>
-				<td>10</td>
-				<td>11</td>
-				<td>12</td>
-			</tr>
-		</table>
-		
-		
-		<p>合并单元格</p>
-		<table border="1px" width="100px" height="100px">
-			<tr>
-				<td colspan="2">1</td>
-				<!-- <td>2</td> -->
-				<td>3</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>5</td>
-				<td rowspan="2">6</td>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td>8</td>
-				<!-- <td>9</td> -->
-			</tr>
-		</table>
-		
-		<table border="1px" width="100px" height="100px">
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-			</tr>
-			<tr>
-				<td colspan="2" rowspan="2">4</td>
-				<!-- <td>5</td> -->
-				<td>6</td>
-			</tr>
-			<tr>
-				<!-- <td>7</td>
-				<td>8</td> -->
-				<td>9</td>
-			</tr>
-		</table>
-		
-		
-		<!-- 表单 -->
-		<form>
-			<input type="text">
-			<input type="submit">
-		</form>
-		
-		<form>
-			用户名：<input type="text">
-			密码：<input type="password">
-			<input type="submit" value="登录">
-		</form>
+		<script>
+			document.write("<p>这是<b>脚本内</b>的p标签内容</p>");
+			
+		</script>
+		<p>这是<b>脚本外</b>的p标签内容</p>
 	</body>
 </html>

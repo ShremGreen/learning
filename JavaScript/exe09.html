@@ -2,20 +2,22 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>文本属性</title>
-		<style>
-			h1 {
-				text-align: center;
-				text-decoration: overline underline;
-			}
-			p {
-				text-transform: capitalize;
-				text-indent: 50px;
-			}
-		</style>
+		<title>js 对象</title>
 	</head>
 	<body>
-		<h1>这是一个标题</h1>
-		<p>hello world</p>
+		<script>
+			var person = {
+				name: "Mike",
+				sex: "male",
+				age: 32,
+				
+				speak: function() {
+					document.write("Hello, I am " + person.name + ".");
+				}
+			};
+			
+			person.speak();
+			document.write(person.age);
+		</script>
 	</body>
 </html>
