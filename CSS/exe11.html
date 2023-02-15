@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>后代选择器</title>
+		<style>
+			/* 后代选择器 */
+			ul li {
+				color: #ff0000;
+			}
+			
+			/* 子代选择器 */
+			 ol>li {
+				 color: #00ff00;
+			 }
+			 
+			/* 相邻兄弟选择器 */
+			 h1+p {
+				color: #0000ff;
+			}
+			
+			/* 通用兄弟选择器 */
+			 h3~p {
+				 color: #ffff00;
+			 }
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<div>
+				<ol>
+					<li>4</li>
+					<li>5</li>
+				</ol>
+			</div>
+		</ul>
+		
+		<hr>
+		<ol>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<div>
+				<ul>
+					<li>4</li>
+					<li>5</li>
+				</ul>
+			</div>
+		</ol>
+		
+		<hr>
+		<h1>12</h1>
+		<p>34</p>
+		<p>56</p>
+		
+		<hr>
+		<h3>12</h3>
+		<p>45</p>
+		<p>67</p>
+		<h4>666</h4>
+		<p>89</p>
+	</body>
+</html>
